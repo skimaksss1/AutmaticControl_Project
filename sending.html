@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправить заявку</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+</head>
+
+<body onload="language()">
+    <div class="preloader">
+        <!-- <div class="loader-22"></div> -->
+        <div class="loader-beaker"></div>
+    </div>
+    <header>
+        <div class="top_nav">
+            <div class="container">
+                <div class="top_nav-content">
+                    <div class="left">
+                        <!-- <div class="search">
+                            <input type="search" class="search-form-field" placeholder="Найти" value="" name="swpquery" title="Search" required="" style="width: 145px;">
+                        </div> -->
+                    </div>
+                    <div class="right">
+                        <div class="language">
+                            <a class="ru">RU</a>
+                            <a class="kz">KZ</a>
+                            <a class="eng">ENG</a>
+                        </div>
+                        <div class="profile">
+                            <a href="profile.html" class="lc">Личный кабинет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="nav-content">
+                    <div class="left">
+                        <a href="general.html"><img class="logo" src="img/logo.png" alt=""></a>
+                    </div>
+                    <div class="right">
+                        <ul class="list_lg">
+                            <li><a href="general.html" class="myGS">Мои АЗС</a></li>
+                            <li><a href="pipeline.html" class="pipelines">Трубопроводы</a></li>
+                            <li><a href="history.html" class="historyApplication bb">История заявок</a></li>
+                            <!-- <li><a href="general.html">Мои АЗС</a></li> -->
+                            <li><a class="btn_application application" href="sending.html">Оставить заявку</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="sending_page">
+            <div class="container">
+                <h3 class="send_request">Отправить заявку</h3>
+                <div class="sel_input sel1">
+                    <div class="sel sel--superman">
+                        <select name="select-superpower" id="select-superpower" size="4">
+                          <option value="" disabled>Город подключения</option>
+                          <option value="Нур-Султан(Астана)">Нур-Султан(Астана)</option>
+                          <option value="Алматы">Алматы</option>
+                          <option value="Шымкент">Шымкент</option>
+                          <option value="Акмолинская область">Акмолинская область</option>
+                          <option value="Актюбинская область">Актюбинская область</option>
+                          <option value="Алматинская область">Алматинская область</option>
+                          <option value="Атырауская область">Атырауская область</option>
+                          <option value="Восточно-Казахстанская область">Восточно-Казахстанская область</option>
+                          <option value="Жамбылская область">Жамбылская область</option>
+                          <option value="Западно-Казахстанская область">Западно-Казахстанская область</option>
+                          <option value="Карагандинская область">Карагандинская область</option>
+                          <option value="Костанайская область">Костанайская область</option>
+                          <option value="Кызылординская область">Кызылординская область</option>
+                          <option value="Мангистауская область">Мангистауская область</option>
+                          <option value="Павлодарская область">Павлодарская область</option>
+                          <option value="Северо-Казахстанская область">Северо-Казахстанская область</option>
+                          <option value="Туркестанская область">Туркестанская область</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sel_input sel2">
+                    <div class="sel sel--superman">
+                        <select name="select-superpower" id="select-superpower" size="4">
+                          <option value="" disabled>Выберите станцию</option>
+                          <option value="АЗС “Helios №1”">АЗС “Helios №1”</option>
+                          <option value="АЗС “Helios №2”">АЗС “Helios №2”</option>
+                          <option value="АЗС “Helios №3”">АЗС “Helios №3”</option>
+                          <option value="АЗС “Helios №4”">АЗС “Helios №4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sel_input sel3">
+                    <div class="sel sel--superman">
+                        <select name="select-superpower" id="select-superpower" size="4">
+                          <option value="" disabled>Выберите тип заявки</option>
+                          <option value="Тех.поддержка">Тех.поддержка</option>
+                          <option value="Услуга">Услуга</option>
+                         
+                        </select>
+                    </div>
+                </div>
+                <div class="sel_input sel4">
+                    <textarea name="" id="" class="sel sel_ta" placeholder="Дополнительное поле"></textarea>
+                </div>
+                <a href="activated.html"><button class="reset_btn btn_style2">Отправить</button></a>
+            </div>
+        </div>
+    </header>
+    <footer class="footer_btn">
+        <div class="container">
+            <div class="footer_content">
+                <span>© copyright</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/preloader.js"></script>
+
+</body>
+
+
+
+</html>

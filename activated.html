@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Активация профиля</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoke-pure.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+</head>
+
+<body onload="language()">
+
+    <section class="auth">
+        <div class="wrapper_auth">
+            <div class="auth_card">
+                <div class="auth_btn">
+                    <h2 class="auth_h2 acrivate_profile">Активируйте профиль</h2>
+                    <p class="activated_description contact_d">Для активации вам потребуется заполнить <br>ваши контактные данные</p>
+                    <div class="input_div input_fam1 a_lastname">
+                        <img class="activated_img" src="img/icon_profile.svg" alt="">
+                        <input id="u_surname" class="input auth_input" type="text" name="" id="" placeholder="Иванов">
+                    </div>
+                    <div class="input_div input_fam2 a_firstname">
+                        <img class="activated_img" src="img/icon_profile.svg" alt="">
+                        <input id="u_name" class="input auth_input" type="text" name="" id="" placeholder="Иван">
+                    </div>
+                    <div class="input_div input_fam3 a_patronymic">
+                        <img class="activated_img" src="img/icon_profile.svg" alt="">
+                        <input id="u_patronymic" class="input auth_input" type="text" name="" id="" placeholder="Иванович">
+                    </div>
+                    <div class="input_div input_date a_dob">
+                        <img class="activated_img" src="img/icon_calendar.svg" alt="">
+                        <input id="u_date" class="input auth_input" type="date" name="" id="">
+                    </div>
+                    <div class="input_div input_iin a_iin">
+                        <img class="activated_img" src="img/icon_iin.svg" alt="">
+                        <input id="u_iin" class="input auth_input" type="text" name="" id="" placeholder="012345678901">
+                    </div>
+                    <div class="input_div input_bin a_bin">
+                        <img class="activated_img" src="img/icon_bin.svg" alt="">
+                        <input id="u_bin" class="input auth_input" type="text" name="" id="" placeholder="012345678901">
+                    </div>
+                    <div class="input_div input_phone a_phone">
+                        <img class="activated_img" src="img/icon_phone.svg" alt="">
+                        <input id="u_phone" class="input auth_input" type="tel" name="" id="" placeholder="+7 (777) 777 77 77">
+                    </div>
+                    <!-- <input type="file"> -->
+                    <div class="input_div input_file a_photo">
+                        <img class="activated_img" src="img/icon_photo.svg" alt="">
+
+                        <div class="fileform">
+                            <div id="fileformlabel">Выберите фотографию</div>
+                            <div class="selectbutton file">Обзор</div>
+                            <input type="file" name="upload" id="upload" placeholder="012345678901" accept="image/jpeg" onchange="getName(this.value);" />
+                        </div>
+
+                    </div>
+                    <a onclick="verify()"><button class="login btn_style2 entry">Подтвердить</button></a>
+                    <a href="index.html"><button class="login btn_style1 cancel">Отменить</button></a>
+                    <div class="min_label-div">
+                        <span class="termsOfUse "><span class="agreements">Нажимая кнопку “Подтвердить” , Вы принимаете
+                            условия</span> <a href="" class="agreement">Пользовательского соглашения</a></span>
+                    </div>
+                    <!-- <button class="login btn_style1">Войти</button>
+                    <button class="reg btn_style2">Регистрация</button>
+                    <a class="forgot" href="#">Забыли пароль?</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="select_lang">
+            <a class="ru">RU</a>
+            <a class="kz">KZ</a>
+            <a class="eng">ENG</a>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/smoke-pure.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".auth_img-card"), {
+            max: 25,
+            speed: 400,
+            reverse: true
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".auth_img-card"));
+    </script>
+    <script>
+        let fields = document.querySelectorAll('.field__file');
+        Array.prototype.forEach.call(fields, function(input) {
+            let label = input.nextElementSibling,
+                labelVal = label.querySelector('.field__file-fake').innerText;
+
+            input.addEventListener('change', function(e) {
+                let countFiles = '';
+                if (this.files && this.files.length >= 1)
+                    countFiles = this.files.length;
+
+                if (countFiles)
+                    label.querySelector('.field__file-fake').innerText = 'Выбрано файлов: ' + countFiles;
+                else
+                    label.querySelector('.field__file-fake').innerText = labelVal;
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>
