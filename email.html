@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Регистрация</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoke-pure.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+</head>
+
+<body>
+    <style>
+        .email_bg {
+            background-color: #f5f5f5;
+            height: 100vh;
+        }
+        
+        .email_card {
+            max-width: 600px;
+            height: auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 5px 0px #00000042;
+        }
+        
+        .email_title {
+            width: 100%;
+            height: auto;
+            padding: 40px 0;
+            background-color: #F18F02;
+            padding: 40px;
+            color: #fff;
+        }
+        
+        .email_content {
+            padding: 40px;
+        }
+    </style>
+    <div class="email_bg">
+        <div class="email_card">
+            <div class="email_title">
+                <h2>Запрос на сброс пароля</h2>
+            </div>
+            <div class="email_content">
+                <p>Здравствуйте, %EMAIL%</p><br>
+                <p>На сайте Automatic Control быд подан запрос на сброс пароля вашей учетной записи %EMAIL% .</p><br>
+                <p>Чтобы сбросить пароль аккаунта, перейдите по ссылке ниже.</p>
+                <p><a href='%LINK%'>%LINK%</a></p><br>
+                <p>Если Вы не отправляли этот запрос, просто проигнорируйте это сообщение.</p><br>
+                <p>С уважением,</p>
+                <p>команда %APP_NAME%</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
