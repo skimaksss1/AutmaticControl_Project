@@ -218,7 +218,7 @@ function resetSearch() {
 
 function addCardMore(nameF, amount, press, flowM, temp, fire, activated) {
 
-    var isFire = (fire == 0) ? 'Всё нормально' : 'Пожар!';
+    var isFire = (fire == 0) ? 'Стабильно' : 'Пожар!';
     var isActive = (activated == 0) ? 'Не активна' : 'Активна';
     read_more.insertAdjacentHTML("beforeend",
         `<hr class="page_title-hr">

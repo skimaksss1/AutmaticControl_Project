@@ -4,8 +4,8 @@
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         mapTypeId: "terrain",
-        zoom: 15,
-        center: { lat: 51.174, lng: 71.410 },
+        zoom: 10,
+        center: { lat: 51.841096, lng: 76.619814 },
     });
     const flightPlanCoordinates = [];
 
@@ -48,6 +48,17 @@ function initMap() {
                 "</div>" +
                 '<h1 id="firstHeading" class="firstHeadingDanger"><img src="img/alertDanger.png">Повышенная опасность</h1>' +
                 '<div id="bodyContent">' +
+                "<span><b>Температура:</b> " +
+                "<span>130</span>" +
+                "<span> °C</span></span>" +
+                "<span><b>Поток:</b> " +
+                "<span>500</span>" +
+                "<span> л/мин</span></span>" +
+                "<span><b>Давление:</b> " +
+                "<span>120</span>" +
+                "<span> бар</span></span>" +
+                "<span><b>Активность:</b> " +
+                "<span>Активна</span></span>" +
                 "<p> Отправьте увдеомление нажав на кнопку ниже</p>" +
                 '<button class="alert_btnDanger">Уведомить</button>'
             "</div>" +
@@ -58,6 +69,17 @@ function initMap() {
                 "</div>" +
                 '<h1 id="firstHeading" class="firstHeadingNormal"><img src="img/alertNormal.png">Приемлимо</h1>' +
                 '<div id="bodyContent">' +
+                "<span><b>Температура:</b> " +
+                "<span>95</span>" +
+                "<span> °C</span></span>" +
+                "<span><b>Поток:</b> " +
+                "<span>300</span>" +
+                "<span> л/мин</span></span>" +
+                "<span><b>Давление:</b> " +
+                "<span>50</span>" +
+                "<span> бар</span></span>" +
+                "<span><b>Активность:</b> " +
+                "<span>Активна</span></span>" +
                 "<p> Отправьте увдеомление нажав на кнопку ниже</p>" +
                 '<button class="alert_btnNormal">Уведомить</button>'
             "</div>" +
@@ -68,6 +90,17 @@ function initMap() {
                 "</div>" +
                 '<h1 id="firstHeading" class="firstHeadingStable"><img src="img/alertStable.png">Стабильно</h1>' +
                 '<div id="bodyContent">' +
+                "<span><b>Температура:</b> " +
+                "<span>90</span>" +
+                "<span> °C</span></span>" +
+                "<span><b>Поток:</b> " +
+                "<span>200</span>" +
+                "<span> л/мин</span></span>" +
+                "<span><b>Давление:</b> " +
+                "<span>26</span>" +
+                "<span> бар</span></span>" +
+                "<span><b>Активность:</b> " +
+                "<span>Активна</span></span>" +
                 "<p> Отправьте увдеомление нажав на кнопку ниже</p>" +
                 '<button class="alert_btnStable">Уведомить</button>'
             "</div>" +
@@ -80,7 +113,7 @@ function initMap() {
                 position: { lat: flightPlanCoordinates[i].lat, lng: flightPlanCoordinates[i].lng },
                 map,
                 title: "Состояние",
-                icon: imageStable,
+                icon: imageDanger,
             });
 
             marker.addListener("click", () => {

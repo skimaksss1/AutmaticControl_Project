@@ -253,5 +253,9 @@ function respPassw() {
             var errorMessage = error.message;
             // ..
         });
+    smoke.alert("<b>Для того чтобы сбросить пароль, пожалуйста перейдите по ссылке отправленное на вашу почту</b>");
+    setTimeout(() => { document.location.replace('profile.html'); }, 10000);
+
+
 
 }
