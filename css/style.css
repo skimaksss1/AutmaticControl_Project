@@ -1852,4 +1852,44 @@ input::-webkit-date {
             transform: rotate(45deg);
   }
 }
+
+.map_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.map_btn {
+  padding: 10px;
+  width: 65px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+.map_btn:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+  cursor: pointer;
+}
+
+.map_btn:active {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

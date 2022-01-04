@@ -67,7 +67,7 @@ function initMap() {
                 '<div id="content">' +
                 '<div id="siteNotice">' +
                 "</div>" +
-                '<h1 id="firstHeading" class="firstHeadingNormal"><img src="img/alertNormal.png">Приемлимо</h1>' +
+                '<h1 id="firstHeading" class="firstHeadingNormal"><img src="img/alertNormal.png">Приемлемо</h1>' +
                 '<div id="bodyContent">' +
                 "<span><b>Температура:</b> " +
                 "<span>95</span>" +
@@ -107,13 +107,13 @@ function initMap() {
             "</div>";
 
             const infowindow = new google.maps.InfoWindow({
-                content: contentStringDanger,
+                content: contentStringNormal,
             });
             const marker = new google.maps.Marker({
                 position: { lat: flightPlanCoordinates[i].lat, lng: flightPlanCoordinates[i].lng },
                 map,
                 title: "Состояние",
-                icon: imageDanger,
+                icon: imageStable,
             });
 
             marker.addListener("click", () => {

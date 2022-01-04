@@ -1697,3 +1697,27 @@
             transform: rotate(45deg);
         }
     }
+    .map_buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .map_btn{
+        padding: 10px;
+        width: 65px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4;
+        border-radius: 4px;
+        margin: 0 10px;
+    }
+    .map_btn:hover {
+        filter: brightness(0.95);
+        cursor: pointer;
+    }
+    .map_btn:active {
+        filter: brightness(0.90);
+        cursor: pointer;
+    }
